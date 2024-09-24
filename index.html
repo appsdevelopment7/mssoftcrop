@@ -72,6 +72,23 @@
       console.log("Calling...");
     }
   </script>
+<!-- Event snippet for PP CC conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16711273519/rkVbCLfU4dUZEK-Yx6A-',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 
 <body onload="autoDial()">
